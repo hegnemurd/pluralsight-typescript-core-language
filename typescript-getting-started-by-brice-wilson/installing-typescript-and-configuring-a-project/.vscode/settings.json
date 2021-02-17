@@ -40,7 +40,7 @@
     "problems.decorations.enabled": false,
   
     "terminal.integrated.fontSize": 16,
-
+    
     "workbench.colorCustomizations": {
       "terminal.background":"#000000",
       "terminal.foreground": "#ffffff",
@@ -50,7 +50,8 @@
     },
 
     "workbench.statusBar.visible": false,
-  
+    "workbench.editor.openSideBySideDirection": "down",
+
     "window.zoomLevel": 0
      
   }
