@@ -29,7 +29,7 @@ document
 
 document
   .getElementById('async-try')
-  .addEventListener('click', renderHeroesAndTryCatch);
+  .addEventListener('click', getHeroesAndTryCatch);
 
 function wrapUp() {
   showFetching(false);
