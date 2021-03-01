@@ -1,6 +1,8 @@
 {
     "extends": "./../tsconfig-base.json",
     "compilerOptions": {
-        "outDir": "./../build/server"
-    }
+        "outDir": "./../build/server",
+        "composite": true
+    },
+    "files": []
 }
