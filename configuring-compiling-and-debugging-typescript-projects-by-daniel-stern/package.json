@@ -2,20 +2,25 @@
   "name": "configuring-compiling-and-debugging-typescript-projects-by-daniel-stern",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "build-server": "tsc -p server",
-    "build-client": "tsc -p client",
-    "serve": "node build/server/server.js"
+    "build-full": "tsc --build",
+    "build-server": "tsc -p src/server",
+    "build-client": "tsc -p src/client",
+    "watch-client": "tsc -p src/client --watch",
+    "build": "tsc -p tsconfig.json",
+    "serve": "node build/server/server.js",
+    "start": "npm run build-full && npm run serve",
+    "debug": "node --inspect=9227 build/server/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.11",
-    "express": "^4.17.1"
+    "@types/node": "^8.10.58",
+    "express": "^4.17.1",
+    "typescript": "^3.9.6"
   },
-  "dependencies": {
-    "typescript": "^3.2.2"
-  }
+  "dependencies": {}
 }
