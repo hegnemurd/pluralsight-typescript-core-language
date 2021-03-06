@@ -2,7 +2,7 @@
 
 import * as express from "express";
 import * as path from "path";
-import { Question } from "../@types/question";
+import { Question } from "../@types/Question";
 
 /*import { Question } from '../shared/Question';*/
 
@@ -44,6 +44,7 @@ app.get("/src/client/client.ts", (_req, res) => {
 failed attempt to get source files working via serving... attempting to inline instead */
 
 app.get("/questions", (_req, res) => {
+  debugger;
   res.json(questions);
 });
 

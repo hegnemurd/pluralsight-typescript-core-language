@@ -1,4 +1,4 @@
-import { Question } from "../@types/question";
+import { Question } from "../@types/Question";
 
 ((): void => {
   let questions: Question[] = [];
@@ -46,7 +46,7 @@ import { Question } from "../@types/question";
     render();
   })();
 
-  async function handleSubmitQuestionForm(): Promise<void> {
+  async function handleSubmitQuestionForm(event): Promise<void> {
     event.preventDefault();
 
     const title: string = document.forms["QuestionForm"][0].value;
