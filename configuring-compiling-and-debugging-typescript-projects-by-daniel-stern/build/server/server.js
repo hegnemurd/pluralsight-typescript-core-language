@@ -7,21 +7,21 @@ var path = require("path");
 var port = process.env.port || 1337;
 var app = express();
 var questions = [
-    {
-        title: "Are dividends tax deductible?",
-        content: "I have recently decided to invest in....",
-        answerCount: 2,
-    },
-    {
-        title: "Is it smart to invest in commodities?",
-        content: "My bank has recently offered a new....",
-        answerCount: 1,
-    },
+  {
+    title: "Are dividends tax deductible?",
+    content: "I have recently decided to invest in....",
+    answerCount: 2,
+  },
+  {
+    title: "Is it smart to invest in commodities?",
+    content: "My bank has recently offered a new....",
+    answerCount: 1,
+  },
 ];
 app.use(express.static("public"));
 app.get("/main.js", function (_req, res) {
-    /** This patch is relative to the build directory */
-    res.sendFile(path.resolve(__dirname, "..", "client", "client.js"));
+  /** This patch is relative to the build directory */
+  res.sendFile(path.resolve(__dirname, "..", "client", "client.js"));
 });
 /*
 app.get("/client.js.map", (_req, res) => {
@@ -37,16 +37,16 @@ app.get("/src/client/client.ts", (_req, res) => {
 });
 failed attempt to get source files working via serving... attempting to inline instead */
 app.get("/questions", function (_req, res) {
-    debugger;
-    res.json(questions);
+  // debugger;
+  res.json(questions);
 });
 app.get("/new", function (req, res) {
-    var question = req.query;
-    questions.push(question);
-    res.json({
-        status: "OK",
-        questions: questions,
-    });
+  var question = req.query;
+  questions.push(question);
+  res.json({
+    status: "OK",
+    questions: questions,
+  });
 });
 app.listen(port);
 console.info("App listening on port " + port + "!");

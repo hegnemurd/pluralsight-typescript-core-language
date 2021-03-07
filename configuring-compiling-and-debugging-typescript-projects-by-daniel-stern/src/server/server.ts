@@ -44,12 +44,12 @@ app.get("/src/client/client.ts", (_req, res) => {
 failed attempt to get source files working via serving... attempting to inline instead */
 
 app.get("/questions", (_req, res) => {
-  debugger;
+  // debugger;
   res.json(questions);
 });
 
 app.get("/new", (req, res) => {
-  const question: Question = req.query;
+  const question: Question = req.query as any as Question;
   questions.push(question);
 
   res.json({
