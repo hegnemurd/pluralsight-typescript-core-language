@@ -2,13 +2,14 @@
   "name": "using-typescript-modules-by-dan-wellman",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node node_modules/esmodules-dev-server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "esmodules-dev-server": "0.0.2",
     "typescript": "^3.6.4"
   }
 }
