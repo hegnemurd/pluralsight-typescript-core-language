@@ -16,3 +16,6 @@ console.log(customStringName); // default
 if (Math.random() >= 0.5) {
   import("./a").then((a) => console.log("The message is: ", aString));
 }
+
+// import * as config from "./config.json";
+// console.log(config.userSetting1);
