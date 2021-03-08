@@ -19,3 +19,27 @@ if (Math.random() >= 0.5) {
 
 // import * as config from "./config.json";
 // console.log(config.userSetting1);
+
+import { cube } from "cube";
+cube(5);
+
+declare module "cube" {
+  export function cube(): string;
+}
+
+cube();
+
+import $ from "jquery";
+
+declare global {
+  interface JQuery {
+    debug(): JQuery;
+  }
+}
+
+$(document).ready(() => console.log("jQuery"));
+
+$().debug = function () {
+  console.debug($(this));
+  return $(this);
+};
