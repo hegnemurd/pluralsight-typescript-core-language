@@ -1,6 +1,8 @@
-// import { aString as theString, bString } from "./a";
+import { aString as theString, bString } from "./a";
 import * as strings from "./a";
 console.log(strings.aString);
+
+import { aString } from "./a";
 
 import { reverse, isOdd } from "./utils";
 console.log(reverse("test"), isOdd(1));
@@ -10,3 +12,7 @@ console.log(customStringName); // default
 
 // import test = require("./a");
 // console.log(test); // test
+
+if (Math.random() >= 0.5) {
+  import("./a").then((a) => console.log("The message is: ", aString));
+}
