@@ -14,3 +14,10 @@ if (Math.random() >= 0.5) {
 // console.log(config.userSetting1);
 import { cube } from "cube";
 cube(5);
+cube();
+import $ from "jquery";
+$(document).ready(() => console.log("jQuery"));
+$().debug = function () {
+    console.debug($(this));
+    return $(this);
+};
