@@ -1,19 +1,45 @@
-import BaseEntity from './BaseEntity';
+import BaseEntity from "./BaseEntity";
+import {
+  required,
+  length,
+  isEmail,
+  isInteger,
+  isPhone,
+  entity,
+  persist,
+  id,
+} from "../decorators";
 
+@entity("people")
 export default class Person extends BaseEntity {
+  @id
+  id: string;
 
-    id: string;
+  @persist
+  @required
+  @length(3, 100)
+  firstName: string;
 
-    firstName: string;
+  @persist
+  @required
+  @length(3, 100)
+  lastName: string;
 
-    lastName: string;
+  @persist
+  @required
+  @isEmail
+  email: string;
 
-    email: string;
+  @persist
+  department: string;
 
-    department: string;
+  @persist
+  @required
+  @isPhone
+  mobileNumber: string;
 
-    mobileNumber: string;
-
-    age: number;
-
+  @persist
+  @required
+  @isInteger(1, 120)
+  age: number;
 }
