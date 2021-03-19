@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "run-generator-lesson-5": "cross-env ROOT=./ ts-node ./lessons/10-Using-Generators-for-Functions-That-Can-Be-Paused-or-Resumed/lesson.5.ts"
+    "run-generator-lesson-5": "cross-env ROOT=./ ts-node ./modules/using-generators-for-functions-that-can-be-paused-or-resumed/1-using-generators-for-functions.ts"
   },
   "devDependencies": {
     "@types/node": "12.7.11"
