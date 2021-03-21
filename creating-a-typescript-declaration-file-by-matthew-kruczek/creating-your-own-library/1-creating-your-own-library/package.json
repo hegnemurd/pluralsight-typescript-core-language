@@ -1,0 +1,30 @@
+{
+  "name": "1-creating-your-own-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "Pluralsight",
+    "Greeting"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "1.19.1",
+    "tslint": "6.0.0",
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "3.8.3"
+  },
+  "files": [
+    "dist/**/*"
+  ]
+}
