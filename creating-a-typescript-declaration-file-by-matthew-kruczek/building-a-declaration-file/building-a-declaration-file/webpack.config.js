@@ -9,6 +9,7 @@ module.exports = {
         }]
     },
     resolve: {
+        modules: ["communicatorModularUMD", "communicatorModularAMD", "communicatorModularCJS"],
         extensions: ['.tsx', '.ts', '.js']
     },
     output: {
